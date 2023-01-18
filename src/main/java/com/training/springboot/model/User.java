@@ -1,10 +1,13 @@
 package com.training.springboot.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -29,6 +32,9 @@ public class User {
 	
 	private int age;
 	private char gender;
+	
+	@OneToOne(mappedBy = "user", fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	private Address address;
 	
 	public User(String firstName, String lastName, int age, char gender) {
 		super();
