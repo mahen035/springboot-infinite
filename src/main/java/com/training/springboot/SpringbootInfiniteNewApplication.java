@@ -18,9 +18,8 @@ public class SpringbootInfiniteNewApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootInfiniteNewApplication.class, args);
 	}
-	
-	
-	
+
+	/*
 	@Bean
 	public CommandLineRunner oneToManyDemo(StudentRepository studRepo, CourseRepository courseRepo) {
 		
@@ -50,13 +49,12 @@ public class SpringbootInfiniteNewApplication {
 			pageRepo.save(new Page(34, "Collection", book));
 			pageRepo.save(new Page(101, "Spring", book));
 			pageRepo.save(new Page(167, "MicroServices", book));
-			*/
+			
 		};
 		
 	}
 		
-	
-	
+
 	/*
 	@Bean
 	public InternalResourceViewResolver resolve() {
